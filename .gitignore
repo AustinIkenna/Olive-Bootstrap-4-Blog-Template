@@ -1,0 +1,12 @@
+# compiled temp files
+/dist
+/tmp
+
+# dependencies
+/node_modules
+gulpfile.js
+package-lock.json
+
+
+# others
+todolist.txt
