@@ -1,0 +1,41 @@
+{
+  "name": "Olive-Bootstrap-4-Blog-Template",
+  "version": "1.0.0",
+  "description": "A SEO-friendly, responsive blog template built with Bootstrap 4 and SCSS",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AustinIkenna/Olive-Bootstrap-4-Blog-Template.git"
+  },
+  "main": "index.html",
+  "style": "src/css/style.css",
+  "sass": "src/sass/style.scss",
+  "script": "src/js/script.js",
+  "scripts": {
+    
+  },
+  "keywords": [
+	"Olive", 
+	"SEO", 
+	"Responsive", 
+	"Blog", 
+	"Bootstrap 4", 
+	"Template",
+  ],
+  "author": "Austin Ikenna",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^1.0.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-deporder": "^1.1.0",
+    "gulp-htmlclean": "^2.7.16",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-inject": "^4.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
+  }
+}
