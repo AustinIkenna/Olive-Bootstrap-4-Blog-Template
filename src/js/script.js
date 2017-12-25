@@ -2,7 +2,7 @@
 var abrev = function(options) {
 
     options = $.extend({
-        length: 250,
+        length: 150,
         contn: ' ...',
     }, options);
 
@@ -20,3 +20,20 @@ var abrev = function(options) {
 $(function() {
 	abrev();
 });
+
+
+// This function detects and adds and the .currentPage css styling to current page
+$(function(){
+  $('.active').each(function() {
+    if ($(this).prop('href') == window.location.href) {
+      $(this).addClass('current');
+    }
+  });
+});  
+
+
+$(function(){
+    $(document).ready(function () {
+        $('.dropdown-toggle').dropdown();
+    });
+});  

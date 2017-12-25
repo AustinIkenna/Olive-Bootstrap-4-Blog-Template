@@ -45,6 +45,8 @@ body {
     background-color: #6699cc;
     .logo {
         color: #ffffff;
+        font-weight: bold;
+        text-align: center;
     }
 }
 
@@ -58,7 +60,7 @@ body {
     padding: 2%;
     background-color: #ffffff;
     button {
-        margin-top: 3%;
+        margin-top: 1%;
         &:hover {
             cursor: pointer;
             background-color: #f5f5f5;
@@ -74,8 +76,16 @@ body {
 }
 
 .input-group {
-    padding: 3% 6% 3% 0;
-    width: 50%;
+    padding: 3% 6% 3% 0 !important;
+}
+
+.list-group {
+    padding: 3% 6% 3% 0 !important;
+}
+
+.list-group-item {
+    padding: 0.2rem 0.8rem !important;
+    border: 1px solid transparent !important;
 }
 
 .page-item {
@@ -84,6 +94,8 @@ body {
 }
 
 .post-img {
+    padding-left: 1%;
+    margin-top: 2%;
     width: 30%;
     height: auto;
 }
@@ -94,30 +106,6 @@ body {
     }
 }
 
-.cat {
-    line-height: 0.5;
-    color: #000000;
-    a {
-        margin-left: 0;
-        color: #6699cc;
-        &:hover {
-            text-decoration: none;
-        }
-    }
-}
-
-.col-md-8 {
-    margin: 0 !important;
-}
-
-footer {
-    color: #ffffff;
-    background-color: #6699cc;
-    min-height: 4em;
-    a {
-        color: #ffffff;
-    }
-}
 
 @media only screen and (min-width: 500px) and (max-width: 991px) {
     html,
@@ -135,5 +123,141 @@ footer {
 @media only screen and (min-width: 1176px) {
     .container-fluid {
         max-width: 1150px !important;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+
+// curent page styling.... not working yet
+.current {
+    border-bottom: 0.2em solid #1a237e;
+}
+
+.bottom-menu {
+    display: none !important;
+}
+
+.pagination {
+    padding: 3% 30% 0 30%;
+}
+
+footer {
+    color: #ffffff;
+    background-color: #6699cc;
+    min-height: 4em;
+    a {
+        color: #ffffff;
+    }
+}
+
+}
+
+@media only screen and (min-width: 0) and (max-width: 575px) {
+    aside,
+    .footer,
+    .mobileHide,
+    .post-text {
+        display: none !important;
+    }
+    .container-fluid {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    html {
+        font-size: 81%;
+        h2 {
+            font-size: 150%;
+        }
+    }
+
+    .logo{
+        padding-top: 0.5rem;
+    }
+
+    #second-header {
+        background-color: #6699cc;
+        .nav-link {
+            color: #ffffff;
+        }
+    }
+
+    // curent page styling.... not working yet
+    .current {
+        color: #ffffff;
+        border-bottom: 0.3em solid #1a237e;
+    }
+
+    .blog-post {
+        margin: 1%;
+        padding: 2%;
+        button {
+            margin-top: 1%;
+            font-size: 70%;
+            &:hover {
+                cursor: pointer;
+                background-color: #f5f5f5;
+        }
+        }
+        .pagination {
+            padding: 5% 8% 18% 8%;
+        }
+    }
+
+    footer {
+        .fixed-bottom a {
+            font-size: 85%;
+            color: #000000;
+            display: inline-block;
+        }
+        .bottom-menu {
+            min-width: 320px;
+            padding: 1%;
+            border-top: 0.3em solid #f5f5f5;
+            background-color: #ffffff;
+            border-top-left-radius: 0.6em;
+            border-top-right-radius: 0.6em;
+            position: fixed;
+        }
+        img {
+        padding-bottom: 5%;
+        margin: 0 25%;
+    }
+    }
+    .col-25 {
+        width: 25%;
+        float: left;
+    }
+}
+
+// post image responsiveness styling
+@media only screen and (min-width: 501px) and (max-width: 575px) {
+    .post-img {
+        width: 28%;
+        margin: 1% 0;
+        padding-left: 1%;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 500px) {
+    .post-img {
+        width: 30%;
+        margin: 1% 0;
+        padding-left: 1%;
+    }
+}
+
+@media only screen and (min-width: 391px) and (max-width: 479px) {
+    .post-img {
+        width: 33%;
+        margin-top: 1%;
+        padding-left: 1%;
+    }
+}
+
+@media only screen and (min-width: 0) and (max-width: 390px) {
+    .post-img {
+        width: 40%;
+        margin-top: 1%;
+        padding-left: 1%;
     }
 }
