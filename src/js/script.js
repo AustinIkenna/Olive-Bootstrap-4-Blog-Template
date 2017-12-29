@@ -22,6 +22,7 @@ $(function() {
 });
 
 
+
 // This function detects and adds and the .currentPage css styling to current page
 $(function(){
   $('.active').each(function() {
@@ -32,8 +33,14 @@ $(function(){
 });  
 
 
-$(function(){
-    $(document).ready(function () {
-        $('.dropdown-toggle').dropdown();
-    });
-});  
+
+// Mobile menu displays when the categories link is clicked
+var navButton = document.querySelector(".mobile-menu-button");
+
+navButton.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  // toggle nav state
+  document.body.classList.toggle("nav-visible");
+});
+

@@ -9,7 +9,6 @@
     <meta property="og:title" content="Olive-Bootstrap-4-Blog-Template" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.js">
 </head>
 
 <body>
@@ -35,21 +34,44 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#popular">Popular</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown"  href="#" aria-haspopup="true" aria-expanded="false">Categories</a>
-                    <div class="dropdown-menu" aria-labelledby="Categories">
-                        <a class="dropdown-item" href="#">Health</a>
-                        <a class="dropdown-item" href="#">Wellness</a>
-                        <a class="dropdown-item" href="#">Fitness</a>
-                        <a class="dropdown-item" href="#">Food and Diet</a>
-                        <a class="dropdown-item" href="#">Beauty</a>
-                        <a class="" href="#">Personal Care</a>
-                        <a class="" href="#">Sex</a>
-                        <a class="" href="#">Podcast</a>
+                <li class="nav-item dropdown mobile-hide">
+                    <a class="nav-link" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">Categories +</a>
+                    <div class="dropdown-menu" role="navigation" aria-labelledby="Categories">
+                        <a class="dropdown-item" href="#health">Health</a>
+                        <a class="dropdown-item" href="#wellness">Wellness</a>
+                        <a class="dropdown-item" href="#fitness">Fitness</a>
+                        <a class="dropdown-item" href="#food">Food and Diet</a>
+                        <a class="dropdown-item" href="#beauty">Beauty</a>
+                        <a class="dropdown-item" href="#personal">Personal Care</a>
+                        <a class="dropdown-item" href="#sex">Sex</a>
+                        <a class="dropdown-item" href="#podcast">Podcast</a>
+                    </div>
+                </li>
+                <li class="mobile-show">
+                    <!--mobile menu-->
+                    <a aria-label='Toggle menu' class='nav-link mobile-menu-button on' data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">Categories +</a>
+                    <div class='mobile-menu-wrapper'>
+                        <div class="mobile-menu">
+                            <a class="mobile-menu-item" href="#"><img src="images/health.png" alt="health"><br>Health</a>
+                            <a class="mobile-menu-item" href="#"><img src="images/wellness.png" alt="wellness"><br>Wellness</a>
+                            <a class="mobile-menu-item" href="#"><img src="images/fitness.png" alt="fitness"><br>Fitness</a>
+                            <a class="mobile-menu-item" href="#"><img src="images/food.png" alt="food and diet"><br>Food and Diet</a>
+                            <a class="mobile-menu-item" href="#"><img src="images/beauty.png" alt="beauty"><br>Beauty</a>
+                            <a class="mobile-menu-item" href="#"><img src="images/personal.png" alt="personal care"><br>Personal Care</a>
+                            <a class="mobile-menu-item" href="#"><img src="images/sex.png" alt="sex"><br>Sex</a>
+                            <a class="mobile-menu-item" href="#"><img src="images/podcast.png" alt="podcast"><br>Podcast</a>
+                            <div class="input-group">
+                                <!--mobile menu search box-->
+                                <input type="search" placeholder="type here" class="form-control">
+                                <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button"> Search!</button>
+                        </span>
+                            </div>
+                        </div>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mobileHide" href="#">Login</a>
+                    <a class="nav-link mobile-hide" href="#">Login</a>
                 </li>
             </ul>
         </div>
@@ -61,16 +83,20 @@
         <div class="row">
 
             <!-- Main blog container -->
-            <section class="col-md-8  blog-post-container">
+            <section class="col-md-9  blog-post-container">
 
                 <!-- First Article -->
                 <article class="blog-post">
                     <header>
-                        <img class="post-img" src="images/healthwellness.jpg" alt="" align="right"><h2>Another Article Goes Here</h2><p> Austin Ikenna <time datetime="">13 Nov, 2017</time></p>
+                        <img class="post-img" src="images/healthwellness.jpg" alt="" align="right">
+                        <h2>Another Article Goes Here</h2>
+                        <p> Austin Ikenna <time datetime="">13 Nov, 2017</time></p>
                     </header>
                     <div>
-                        <p class="post-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a quam ac justo vestibulum elementum at non nibh. Duis lacinia, tortor a aliquet volutpat, justo ipsum posuere enim, luctus blandit nibh arcu in orci. In fringilla non nisl a lobortis. Cras tempor, sapien id dictum tempus, eros arcu rutrum metus, et blandit dolor magna ut velit. Nam at ullamcorper urna, feugiat ornare nulla. Curabitur id diam non massa suscipit scelerisque. Vivamus dignissim justo ultricies finibus mollis. Fusce sed nisi id libero mollis pharetra. Sed eu interdum elit. Vivamus varius condimentum mauris, eget cursus nisl ornare eu. Nam eget dolor in odio mattis iaculis eget sed ipsum. Mauris porta
-                        in purus non hendrerit. Fusce tincidunt imperdiet risus at consectetur. </p>
+                        <p class="post-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a quam ac justo vestibulum elementum at non nibh. Duis lacinia, tortor a aliquet volutpat, justo ipsum posuere enim, luctus blandit nibh arcu in orci. In fringilla
+                            non nisl a lobortis. Cras tempor, sapien id dictum tempus, eros arcu rutrum metus, et blandit dolor magna ut velit. Nam at ullamcorper urna, feugiat ornare nulla. Curabitur id diam non massa suscipit scelerisque. Vivamus dignissim
+                            justo ultricies finibus mollis. Fusce sed nisi id libero mollis pharetra. Sed eu interdum elit. Vivamus varius condimentum mauris, eget cursus nisl ornare eu. Nam eget dolor in odio mattis iaculis eget sed ipsum. Mauris porta
+                            in purus non hendrerit. Fusce tincidunt imperdiet risus at consectetur. </p>
                         <button type="button" class="btn btn-outline-primary "><a href="">READ MORE</a></button>
                     </div>
                 </article>
@@ -78,11 +104,15 @@
                 <!-- Second Article -->
                 <article class="blog-post">
                     <header>
-                        <img class="post-img" src="images/healthwellness.jpg" alt="" align="right"><h2>Another Article Goes Here</h2><p> Austin Ikenna <time datetime="">13 Nov, 2017</time></p>
+                        <img class="post-img" src="images/healthwellness.jpg" alt="" align="right">
+                        <h2>Another Article Goes Here</h2>
+                        <p> Austin Ikenna <time datetime="">13 Nov, 2017</time></p>
                     </header>
                     <div>
-                        <p class="post-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a quam ac justo vestibulum elementum at non nibh. Duis lacinia, tortor a aliquet volutpat, justo ipsum posuere enim, luctus blandit nibh arcu in orci. In fringilla non nisl a lobortis. Cras tempor, sapien id dictum tempus, eros arcu rutrum metus, et blandit dolor magna ut velit. Nam at ullamcorper urna, feugiat ornare nulla. Curabitur id diam non massa suscipit scelerisque. Vivamus dignissim justo ultricies finibus mollis. Fusce sed nisi id libero mollis pharetra. Sed eu interdum elit. Vivamus varius condimentum mauris, eget cursus nisl ornare eu. Nam eget dolor in odio mattis iaculis eget sed ipsum. Mauris porta
-                        in purus non hendrerit. Fusce tincidunt imperdiet risus at consectetur. </p>
+                        <p class="post-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a quam ac justo vestibulum elementum at non nibh. Duis lacinia, tortor a aliquet volutpat, justo ipsum posuere enim, luctus blandit nibh arcu in orci. In fringilla
+                            non nisl a lobortis. Cras tempor, sapien id dictum tempus, eros arcu rutrum metus, et blandit dolor magna ut velit. Nam at ullamcorper urna, feugiat ornare nulla. Curabitur id diam non massa suscipit scelerisque. Vivamus dignissim
+                            justo ultricies finibus mollis. Fusce sed nisi id libero mollis pharetra. Sed eu interdum elit. Vivamus varius condimentum mauris, eget cursus nisl ornare eu. Nam eget dolor in odio mattis iaculis eget sed ipsum. Mauris porta
+                            in purus non hendrerit. Fusce tincidunt imperdiet risus at consectetur. </p>
                         <button type="button" class="btn btn-outline-primary"><a href="">READ MORE</a></button>
                     </div>
                 </article>
@@ -90,11 +120,15 @@
                 <!-- Third Article -->
                 <article class="blog-post">
                     <header>
-                        <img class="post-img" src="images/healthwellness.jpg" alt="" align="right"><h2>Another Article Goes Here</h2><p> Austin Ikenna <time datetime="">13 Nov, 2017</time></p>
+                        <img class="post-img" src="images/healthwellness.jpg" alt="" align="right">
+                        <h2>Another Article Goes Here</h2>
+                        <p> Austin Ikenna <time datetime="">13 Nov, 2017</time></p>
                     </header>
                     <div>
-                        <p class="post-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a quam ac justo vestibulum elementum at non nibh. Duis lacinia, tortor a aliquet volutpat, justo ipsum posuere enim, luctus blandit nibh arcu in orci. In fringilla non nisl a lobortis. Cras tempor, sapien id dictum tempus, eros arcu rutrum metus, et blandit dolor magna ut velit. Nam at ullamcorper urna, feugiat ornare nulla. Curabitur id diam non massa suscipit scelerisque. Vivamus dignissim justo ultricies finibus mollis. Fusce sed nisi id libero mollis pharetra. Sed eu interdum elit. Vivamus varius condimentum mauris, eget cursus nisl ornare eu. Nam eget dolor in odio mattis iaculis eget sed ipsum. Mauris porta
-                        in purus non hendrerit. Fusce tincidunt imperdiet risus at consectetur. </p>
+                        <p class="post-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a quam ac justo vestibulum elementum at non nibh. Duis lacinia, tortor a aliquet volutpat, justo ipsum posuere enim, luctus blandit nibh arcu in orci. In fringilla
+                            non nisl a lobortis. Cras tempor, sapien id dictum tempus, eros arcu rutrum metus, et blandit dolor magna ut velit. Nam at ullamcorper urna, feugiat ornare nulla. Curabitur id diam non massa suscipit scelerisque. Vivamus dignissim
+                            justo ultricies finibus mollis. Fusce sed nisi id libero mollis pharetra. Sed eu interdum elit. Vivamus varius condimentum mauris, eget cursus nisl ornare eu. Nam eget dolor in odio mattis iaculis eget sed ipsum. Mauris porta
+                            in purus non hendrerit. Fusce tincidunt imperdiet risus at consectetur. </p>
                         <button type="button" class="btn btn-outline-primary"><a href="">READ MORE</a></button>
                     </div>
                 </article>
@@ -102,11 +136,15 @@
                 <!-- Fourth Article -->
                 <article class="blog-post">
                     <header>
-                        <img class="post-img" src="images/healthwellness.jpg" alt="" align="right"><h2>Another Article Goes Here</h2><p> Austin Ikenna <time datetime="">13 Nov, 2017</time></p>
+                        <img class="post-img" src="images/healthwellness.jpg" alt="" align="right">
+                        <h2>Another Article Goes Here</h2>
+                        <p> Austin Ikenna <time datetime="">13 Nov, 2017</time></p>
                     </header>
                     <div>
-                        <p class="post-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a quam ac justo vestibulum elementum at non nibh. Duis lacinia, tortor a aliquet volutpat, justo ipsum posuere enim, luctus blandit nibh arcu in orci. In fringilla non nisl a lobortis. Cras tempor, sapien id dictum tempus, eros arcu rutrum metus, et blandit dolor magna ut velit. Nam at ullamcorper urna, feugiat ornare nulla. Curabitur id diam non massa suscipit scelerisque. Vivamus dignissim justo ultricies finibus mollis. Fusce sed nisi id libero mollis pharetra. Sed eu interdum elit. Vivamus varius condimentum mauris, eget cursus nisl ornare eu. Nam eget dolor in odio mattis iaculis eget sed ipsum. Mauris porta
-                        in purus non hendrerit. Fusce tincidunt imperdiet risus at consectetur. </p>
+                        <p class="post-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a quam ac justo vestibulum elementum at non nibh. Duis lacinia, tortor a aliquet volutpat, justo ipsum posuere enim, luctus blandit nibh arcu in orci. In fringilla
+                            non nisl a lobortis. Cras tempor, sapien id dictum tempus, eros arcu rutrum metus, et blandit dolor magna ut velit. Nam at ullamcorper urna, feugiat ornare nulla. Curabitur id diam non massa suscipit scelerisque. Vivamus dignissim
+                            justo ultricies finibus mollis. Fusce sed nisi id libero mollis pharetra. Sed eu interdum elit. Vivamus varius condimentum mauris, eget cursus nisl ornare eu. Nam eget dolor in odio mattis iaculis eget sed ipsum. Mauris porta
+                            in purus non hendrerit. Fusce tincidunt imperdiet risus at consectetur. </p>
                         <button type="button" class="btn btn-outline-primary"><a href="">READ MORE</a></button>
                     </div>
                 </article>
@@ -114,11 +152,15 @@
                 <!-- Fifth Article -->
                 <article class="blog-post">
                     <header>
-                        <img class="post-img" src="images/healthwellness.jpg" alt="" align="right"><h2>Another Article Goes Here</h2><p> Austin Ikenna <time datetime="">13 Nov, 2017</time></p>
+                        <img class="post-img" src="images/healthwellness.jpg" alt="" align="right">
+                        <h2>Another Article Goes Here</h2>
+                        <p> Austin Ikenna <time datetime="">13 Nov, 2017</time></p>
                     </header>
                     <div>
-                        <p class="post-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a quam ac justo vestibulum elementum at non nibh. Duis lacinia, tortor a aliquet volutpat, justo ipsum posuere enim, luctus blandit nibh arcu in orci. In fringilla non nisl a lobortis. Cras tempor, sapien id dictum tempus, eros arcu rutrum metus, et blandit dolor magna ut velit. Nam at ullamcorper urna, feugiat ornare nulla. Curabitur id diam non massa suscipit scelerisque. Vivamus dignissim justo ultricies finibus mollis. Fusce sed nisi id libero mollis pharetra. Sed eu interdum elit. Vivamus varius condimentum mauris, eget cursus nisl ornare eu. Nam eget dolor in odio mattis iaculis eget sed ipsum. Mauris porta
-                        in purus non hendrerit. Fusce tincidunt imperdiet risus at consectetur. </p>
+                        <p class="post-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a quam ac justo vestibulum elementum at non nibh. Duis lacinia, tortor a aliquet volutpat, justo ipsum posuere enim, luctus blandit nibh arcu in orci. In fringilla
+                            non nisl a lobortis. Cras tempor, sapien id dictum tempus, eros arcu rutrum metus, et blandit dolor magna ut velit. Nam at ullamcorper urna, feugiat ornare nulla. Curabitur id diam non massa suscipit scelerisque. Vivamus dignissim
+                            justo ultricies finibus mollis. Fusce sed nisi id libero mollis pharetra. Sed eu interdum elit. Vivamus varius condimentum mauris, eget cursus nisl ornare eu. Nam eget dolor in odio mattis iaculis eget sed ipsum. Mauris porta
+                            in purus non hendrerit. Fusce tincidunt imperdiet risus at consectetur. </p>
                         <button type="button" class="btn btn-outline-primary"><a href="">READ MORE</a></button>
                     </div>
                 </article>
@@ -126,11 +168,15 @@
                 <!-- Sixth Article -->
                 <article class="blog-post">
                     <header>
-                        <img class="post-img" src="images/healthwellness.jpg" alt="" align="right"><h2>Another Article Goes Here</h2><p> Austin Ikenna <time datetime="">13 Nov, 2017</time></p>
+                        <img class="post-img" src="images/healthwellness.jpg" alt="" align="right">
+                        <h2>Another Article Goes Here</h2>
+                        <p> Austin Ikenna <time datetime="">13 Nov, 2017</time></p>
                     </header>
                     <div>
-                        <p class="post-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a quam ac justo vestibulum elementum at non nibh. Duis lacinia, tortor a aliquet volutpat, justo ipsum posuere enim, luctus blandit nibh arcu in orci. In fringilla non nisl a lobortis. Cras tempor, sapien id dictum tempus, eros arcu rutrum metus, et blandit dolor magna ut velit. Nam at ullamcorper urna, feugiat ornare nulla. Curabitur id diam non massa suscipit scelerisque. Vivamus dignissim justo ultricies finibus mollis. Fusce sed nisi id libero mollis pharetra. Sed eu interdum elit. Vivamus varius condimentum mauris, eget cursus nisl ornare eu. Nam eget dolor in odio mattis iaculis eget sed ipsum. Mauris porta
-                        in purus non hendrerit. Fusce tincidunt imperdiet risus at consectetur. </p>
+                        <p class="post-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a quam ac justo vestibulum elementum at non nibh. Duis lacinia, tortor a aliquet volutpat, justo ipsum posuere enim, luctus blandit nibh arcu in orci. In fringilla
+                            non nisl a lobortis. Cras tempor, sapien id dictum tempus, eros arcu rutrum metus, et blandit dolor magna ut velit. Nam at ullamcorper urna, feugiat ornare nulla. Curabitur id diam non massa suscipit scelerisque. Vivamus dignissim
+                            justo ultricies finibus mollis. Fusce sed nisi id libero mollis pharetra. Sed eu interdum elit. Vivamus varius condimentum mauris, eget cursus nisl ornare eu. Nam eget dolor in odio mattis iaculis eget sed ipsum. Mauris porta
+                            in purus non hendrerit. Fusce tincidunt imperdiet risus at consectetur. </p>
                         <button type="button" class="btn btn-outline-primary"><a href="">READ MORE</a></button>
                     </div>
                 </article>
@@ -147,9 +193,9 @@
                             <li class="page-item active"><a href="#" class="page-link">1</a></li>
                             <li class="page-item"><a href="#" class="page-link">2</a></li>
                             <li class="page-item"><a href="#" class="page-link">3</a></li>
-                            <li class="page-item mobileHide"><a href="#" class="page-link">4</a></li>
-                            <li class="page-item mobileHide"><a href="#" class="page-link">5</a></li>
-                            <li class="page-item mobileHide"><a href="#" class="page-link">6</a></li>
+                            <li class="page-item mobile-hide"><a href="#" class="page-link">4</a></li>
+                            <li class="page-item mobile-hide"><a href="#" class="page-link">5</a></li>
+                            <li class="page-item mobile-hide"><a href="#" class="page-link">6</a></li>
                             <li class="page-item">
                                 <a href="#" class="page-link" aria-label="NEXT">
                                     <span aria-hidden="true">&raquo;</span>
@@ -162,7 +208,7 @@
             <!-- Main blog container -->
 
             <!-- Side bar content -->
-            <aside class=" sidebar-container col-md-4">
+            <aside class=" sidebar-container col-md-3">
                 <!-- Social media icons -->
                 <div class="sidebar social-icons">
                     <img src="images/facebook.png" alt="" width="30%">
@@ -221,34 +267,44 @@
             <!-- End of Side bar content -->
 
         </div>
-        <!-- Row -->
+        <!-- End of Row -->
     </div>
-    <!-- Container -->
+    <!-- End of container -->
 
     <footer>
         <div class="container-fluid footer">
+            <!--footer navigation-->
             <div class="row">
                 <div class="col-sm-1">
                     <a class="nav-link" href="#">Home</a>
                 </div>
-                <div class="col-sm-7">
+                <div class="col-sm-6">
                     <a class="nav-link" href="#">Contact</a>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-5">
                     <a class="nav-link" href="https://twitter.com/austin_ikenna">Designed by [ A I ]</a>
                 </div>
             </div>
         </div>
         <div class="fixed-bottom bottom-menu text-center">
-            <div class="col-25"><a class="nav-link" href="index.html"><img src="images/home.png" alt="home" width="35%">home</a></div>
-            <div class="col-25"><a class="nav-link" href="#"><img src="images/bookmark.png" alt="home" width="35%">Bookmark</a></div>
-            <div class="col-25"><a class="nav-link" href="#"><img src="images/newsletter.png" alt="home" width="35%">Subscribe</a></div>
-            <div class="col-25"><a class="nav-link" href="#"><img src="images/user.png" alt="home" width="35%">Login</a></div>
+            <!--bottom mobile navigation-->
+            <div class="col-25">
+                <a class="nav-link" href="index.html"><img src="images/home2.png" alt="home">home</a>
+            </div>
+            <div class="col-25">
+                <a class="nav-link" href="#"><img src="images/bookmark2.png" alt="home">Bookmark</a>
+            </div>
+            <div class="col-25">
+                <a class="nav-link" href="#"><img src="images/newsletter2.png" alt="home">Subscribe</a>
+            </div>
+            <div class="col-25">
+                <a class="nav-link" href="#"><img src="images/user2.png" alt="home">Login</a>
+            </div>
         </div>
     </footer>
 
-    <script src="js/jquery-3.2.1.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 

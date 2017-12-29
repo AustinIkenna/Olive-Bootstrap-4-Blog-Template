@@ -31,7 +31,6 @@
 body {
     width: 100%;
     background-color: #f5f5f5 !important;
-    min-width: 320px !important;
     font-family: "Nunito";
     margin-left: 0;
     margin-right: 0;
@@ -56,11 +55,12 @@ body {
 }
 
 .blog-post {
-    margin: 3%;
+    margin: 4.8%;
     padding: 2%;
     background-color: #ffffff;
     button {
         margin-top: 1%;
+        font-size: 80%;
         &:hover {
             cursor: pointer;
             background-color: #f5f5f5;
@@ -69,7 +69,7 @@ body {
 }
 
 .sidebar {
-    margin: 10% 4%;
+    margin: 16% 1%;
     padding: 2% 0 2% 6%;
     background-color: #ffffff;
     clear: left;
@@ -128,9 +128,12 @@ body {
 
 @media only screen and (min-width: 576px) {
 
-// curent page styling.... not working yet
+.mobile-show {
+    display: none;
+}
+// curent page styling....
 .current {
-    border-bottom: 0.2em solid #1a237e;
+    border-bottom: 0.3em solid #1a237e;
 }
 
 .bottom-menu {
@@ -143,6 +146,7 @@ body {
 
 footer {
     color: #ffffff;
+    padding: 2%;
     background-color: #6699cc;
     min-height: 4em;
     a {
@@ -153,12 +157,21 @@ footer {
 }
 
 @media only screen and (min-width: 0) and (max-width: 575px) {
+    
+    body {
+        width: 100%;
+        min-width: 320px !important;
+    }
+    *, *:before, *:after {
+    box-sizing: border-box;
+    }
     aside,
     .footer,
-    .mobileHide,
+    .mobile-hide,
     .post-text {
         display: none !important;
     }
+
     .container-fluid {
         padding: 0 !important;
         margin: 0 !important;
@@ -169,25 +182,33 @@ footer {
             font-size: 150%;
         }
     }
-
+    
     .logo{
         padding-top: 0.5rem;
     }
 
+    #first-header,
+    #second-header {
+        width: 100%;
+        z-index: 999;
+    }
+
     #second-header {
         background-color: #6699cc;
+        border-bottom: 0 solid transparent;
         .nav-link {
             color: #ffffff;
         }
     }
 
-    // curent page styling.... not working yet
+    // curent page styling...
     .current {
         color: #ffffff;
         border-bottom: 0.3em solid #1a237e;
     }
 
     .blog-post {
+        top: 25%;
         margin: 1%;
         padding: 2%;
         button {
@@ -210,31 +231,102 @@ footer {
             display: inline-block;
         }
         .bottom-menu {
-            min-width: 320px;
             padding: 1%;
             border-top: 0.3em solid #f5f5f5;
             background-color: #ffffff;
-            border-top-left-radius: 0.6em;
-            border-top-right-radius: 0.6em;
+            border-top-left-radius: 0.5em;
+            border-top-right-radius: 0.5em;
             position: fixed;
         }
-        img {
-        padding-bottom: 5%;
-        margin: 0 25%;
-    }
     }
     .col-25 {
         width: 25%;
         float: left;
     }
+
+
+    // mobile menu styling
+    .mobile-menu-wrapper { /*.. Mobile menu body ..*/
+        background-color: #ffffff;
+        height: 100%;
+        padding-top: 0.1em;
+        -webkit-perspective: 1000px;
+                perspective: 1000px;
+        position: fixed;
+        right: 0;
+        top: 10.9%; 
+        visibility: hidden;
+        width: 100%;
+        z-index: 500; 
+    }
+    .mobile-menu-item {
+        width: 50%;
+        float: left;
+    }
+    .nav-visible .mobile-menu-wrapper {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        visibility: visible;
+    }
+
+    .nav-visible .mobile-menu {
+        -webkit-transform: rotateY(0deg);
+                transform: rotateY(0deg);
+    }
+
+    .mobile-menu-wrapper #second-header {
+        border-bottom: none;
+    }
+
+    .mobile-menu a.currentPage  {
+        color: #1a237e;
+    }
+    .mobile-menu a {
+        width: 50%;
+        height: 8.1em;
+        font-size: 100%;
+        display: block;
+        line-height: 1.2;
+        padding: 4.5% 1%;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: #ffffff;
+        border: 0.15em solid black;
+        text-align: center;
+        display: block;
+        margin: auto;
+    }
+    .mobile-menu a:focus, .mobile-menu a:hover {
+        text-decoration: none;
+        border-bottom: none;
+    }
+    .input-group {
+        padding: 1% 0 !important;
+        }
 }
 
-// post image responsiveness styling
+// post image, mobile menu and footer responsiveness styling
 @media only screen and (min-width: 501px) and (max-width: 575px) {
     .post-img {
-        width: 28%;
+        width: 27.5%;
         margin: 1% 0;
         padding-left: 1%;
+    }
+    .mobile-menu {
+        img {
+            width: 25%;
+        }
+        a {
+        padding: 3% 1%;
+        }
+    }
+    footer {
+        img {
+            width: 25%;
+            height: auto;
+            padding-bottom: 5%;
+            margin: 0 25%;
+        }
     }
 }
 
@@ -244,6 +336,22 @@ footer {
         margin: 1% 0;
         padding-left: 1%;
     }
+    .mobile-menu {
+        img {
+            width: 30%;
+        }
+        a {
+        padding: 3.2% 1%;
+        }
+    }
+    footer {
+        img {
+            width: 26%;
+            height: auto;
+            padding-bottom: 3%;
+            margin: 0 25%;
+        }
+    }
 }
 
 @media only screen and (min-width: 391px) and (max-width: 479px) {
@@ -252,6 +360,22 @@ footer {
         margin-top: 1%;
         padding-left: 1%;
     }
+    .mobile-menu {
+        img {
+            width: 30%;
+        }
+        a {
+        padding: 4.2% 1%;
+        }
+    }
+    footer {
+        img {
+            width: 27%;
+            height: auto;
+            padding-bottom: 5%;
+            margin: 0 25%;
+        }
+    }
 }
 
 @media only screen and (min-width: 0) and (max-width: 390px) {
@@ -259,5 +383,21 @@ footer {
         width: 40%;
         margin-top: 1%;
         padding-left: 1%;
+    }
+    .mobile-menu {
+        img {
+            width: 30%;
+        }
+        a {
+        padding: 5.3% 1%;
+        }
+    }
+    footer {
+        img {
+            width: 30%;
+            height: auto;
+            padding-bottom: 5%;
+            margin: 0 25%;
+        }
     }
 }
