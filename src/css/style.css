@@ -58,6 +58,11 @@ body {
   background-color: #ffffff;
   clear: left; }
 
+.btn-outline-primary {
+  border-color: #000 !important; }
+  .btn-outline-primary a {
+    color: #000 !important; }
+
 .input-group {
   padding: 3% 6% 3% 0 !important; }
 
