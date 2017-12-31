@@ -1,5 +1,6 @@
 # Olive-Bootstrap-4-Blog-Template
 SEO-friendly, responsive blog template built with Bootstrap 4 and SCSS.
+(Work in Progress)
 
 ### Language and Tools
 * HTML5
