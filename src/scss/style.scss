@@ -29,15 +29,11 @@
 }
 
 body {
-    width: 100%;
+    width: 100% !important;
     background-color: #f5f5f5 !important;
     font-family: "Nunito";
     margin-left: 0;
     margin-right: 0;
-}
-
-.container {
-    margin: 4% auto 0 auto !important;
 }
 
 #first-header {
@@ -159,12 +155,13 @@ footer {
 @media only screen and (min-width: 0) and (max-width: 575px) {
     
     body {
-        width: 100%;
         min-width: 320px !important;
     }
+
     *, *:before, *:after {
     box-sizing: border-box;
     }
+
     aside,
     .footer,
     .mobile-hide,
@@ -176,6 +173,7 @@ footer {
         padding: 0 !important;
         margin: 0 !important;
     }
+
     html {
         font-size: 81%;
         h2 {
@@ -183,13 +181,12 @@ footer {
         }
     }
     
-    .logo{
+    .logo {
         padding-top: 0.5rem;
     }
 
     #first-header,
     #second-header {
-        width: 100%;
         z-index: 999;
     }
 
@@ -217,7 +214,7 @@ footer {
             &:hover {
                 cursor: pointer;
                 background-color: #f5f5f5;
-        }
+            }
         }
         .pagination {
             padding: 5% 8% 18% 8%;
@@ -237,6 +234,7 @@ footer {
             border-top-left-radius: 0.5em;
             border-top-right-radius: 0.5em;
             position: fixed;
+            z-index: 400; 
         }
     }
     .col-25 {
@@ -244,25 +242,28 @@ footer {
         float: left;
     }
 
-
     // mobile menu styling
-    .mobile-menu-wrapper { /*.. Mobile menu body ..*/
+    // Mobile menu body 
+    .mobile-menu-wrapper {
         background-color: #ffffff;
         height: 100%;
-        padding-top: 0.1em;
+        padding-top: 1em;
         -webkit-perspective: 1000px;
                 perspective: 1000px;
         position: fixed;
         right: 0;
-        top: 10.9%; 
+        top: 0; 
         visibility: hidden;
         width: 100%;
+        border: 1em solid #ffffff;
         z-index: 500; 
     }
+
     .mobile-menu-item {
         width: 50%;
         float: left;
     }
+
     .nav-visible .mobile-menu-wrapper {
         -webkit-transform: translateX(0);
                 transform: translateX(0);
@@ -281,9 +282,11 @@ footer {
     .mobile-menu a.currentPage  {
         color: #1a237e;
     }
+
     .mobile-menu a {
-        width: 50%;
-        height: 8.1em;
+        color: #6699cc !important;
+        width: 49%;
+        height: 7.4em;
         font-size: 100%;
         display: block;
         line-height: 1.2;
@@ -291,18 +294,43 @@ footer {
         text-align: center;
         text-transform: uppercase;
         background-color: #ffffff;
-        border: 0.15em solid black;
+        border: 0.15em solid lightgrey;
+        border-radius: 0.2em;
         text-align: center;
         display: block;
-        margin: auto;
+        margin: 0.05rem;
+        z-index: 500; 
+        &:hover {
+            border: none;
+        }
     }
+
+    .close-menu {
+        cursor: pointer;
+        margin-right: 4%;
+        position: absolute;
+        right: 0.8%;
+    }
+
+    .col-50 {
+        padding: 2% 2%;
+    }
+
     .mobile-menu a:focus, .mobile-menu a:hover {
         text-decoration: none;
         border-bottom: none;
     }
+
     .input-group {
-        padding: 1% 0 !important;
+        width: 98.5% !important;
+        padding: 2% 0 !important;
+        input {
+        font-size: 200% !important;
+        &:focus {
+            border: none !important;
         }
+        }
+    }
 }
 
 // post image, mobile menu and footer responsiveness styling
@@ -314,10 +342,10 @@ footer {
     }
     .mobile-menu {
         img {
-            width: 25%;
+            width: 23%;
         }
         a {
-        padding: 3% 1%;
+        padding: 2% 1%;
         }
     }
     footer {
@@ -338,7 +366,7 @@ footer {
     }
     .mobile-menu {
         img {
-            width: 30%;
+            width: 28%;
         }
         a {
         padding: 3.2% 1%;
@@ -362,10 +390,10 @@ footer {
     }
     .mobile-menu {
         img {
-            width: 30%;
+            width: 28%;
         }
         a {
-        padding: 4.2% 1%;
+        padding: 3.5% 1%;
         }
     }
     footer {
