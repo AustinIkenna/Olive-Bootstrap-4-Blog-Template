@@ -1,4 +1,4 @@
-/* ***************** Font styling *********************/
+/****************** Font styling *********************/
 
 @font-face {
     font-family: 'Nunito';
@@ -36,6 +36,7 @@ body {
     margin-right: 0;
 }
 
+// header styling
 #first-header {
     background-color: #6699cc;
     .logo {
@@ -44,71 +45,125 @@ body {
         text-align: center;
     }
 }
-
 #second-header {
     background-color: #ffffff;
     border-bottom: 0.1rem solid #6699cc;
 }
 
+// homepage blog posts styling
 .blog-post {
-    margin: 4.8%;
-    padding: 2%;
+    margin: 4.8% 1%;
+    padding: 2.5%;
     background-color: #ffffff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    a {
+        color: #000000;
+        }
     button {
+        color: #000000 !important;
         margin-top: 1%;
         font-size: 80%;
         &:hover {
+            color: #000000 !important;
             cursor: pointer;
             background-color: #f5f5f5;
         }
+        &:focus,
+        &:active {
+            background-color: none !important;
+        }
+    }
+    img {
+        padding-left: 1%;
+        margin-top: 1%;
+        width: 30%;
+        height: auto;
+        float: right;
     }
 }
 
-.sidebar {
-    margin: 16% 1%;
-    padding: 2% 0 2% 6%;
-    background-color: #ffffff;
-    clear: left;
-}
-
-.btn-outline-primary {
-    border-color: #000 !important;
+// single post styling
+.single-post {
+    margin-top: 4.8%;
+    .post-img {
+        margin-bottom: 2%;
+        width: 100%;
+        height: auto;
+    }
     a {
-        color: #000 !important;
+        text-decoration: none !important;
     }
 }
 
-.input-group {
-    padding: 3% 6% 3% 0 !important;
+.comments {
+    margin-bottom: 15%;
 }
 
-.list-group {
-    padding: 3% 6% 3% 0 !important;
+// side bar styling
+aside .card {
+    margin: 15% 1% 0 1%;
+    &:last-child {
+        margin-bottom: 7% !important;
+    }
 }
 
-.list-group-item {
-    padding: 0.2rem 0.8rem !important;
-    border: 1px solid transparent !important;
-}
-
+// pagination styling
 .page-item {
     width: 100%;
     padding-right: 2%;
 }
 
-.post-img {
-    padding-left: 1%;
-    margin-top: 2%;
-    width: 30%;
-    height: auto;
-}
-
+// social icon styling
 .social-icons {
     img {
-        padding: 4% 5%;
+        margin: 1%;
+    }
+}
+@media only screen and (max-width: 767px) {
+.social-icons {
+    img {
+        width: 11%;
+        padding: 1%;
+    }
+}
+.card {
+    margin: 4% 1% 0 1% !important;
+}
+}
+
+// overiding bootstrap styling
+textarea:focus,
+input:focus {
+    background-color: none !important;
+    border-color: #000000 !important;
+    box-shadow: none !important;    
+}
+
+.btn-outline-primary,
+    {
+    border-color: #000000 !important;
+    &:focus {
+        color: #000000;
+        background-color: none !important;
+        border-color: #000000 !important;
+        box-shadow: none !important;    
     }
 }
 
+.list-group-item {
+    padding: 0.2rem 0 !important;
+    border: 1px solid transparent !important;
+}
+
+
+// responsiness styling...
+@media only screen and (min-width: 1176px) {
+    .container-fluid {
+        max-width: 1150px !important;
+    }
+}
 
 @media only screen and (min-width: 500px) and (max-width: 991px) {
     html,
@@ -123,14 +178,9 @@ body {
     }
 }
 
-@media only screen and (min-width: 1176px) {
-    .container-fluid {
-        max-width: 1150px !important;
-    }
-}
-
 @media only screen and (min-width: 576px) {
 
+#single-post-header,
 .mobile-show {
     display: none;
 }
@@ -151,7 +201,6 @@ footer {
     color: #ffffff;
     padding: 2%;
     background-color: #6699cc;
-    min-height: 4em;
     a {
         color: #ffffff;
     }
@@ -166,19 +215,26 @@ footer {
     }
 
     *, *:before, *:after {
-    box-sizing: border-box;
+        box-sizing: border-box;
     }
 
     aside,
     .footer,
     .mobile-hide,
-    .post-text {
+    .blog-post p {
         display: none !important;
     }
 
+    // overiding bootstrap styling
     .container-fluid {
         padding: 0 !important;
         margin: 0 !important;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 25% !important;  
+        padding-left: 2%;
     }
 
     html {
@@ -197,7 +253,21 @@ footer {
         z-index: 999;
     }
 
-    #second-header {
+    #single-post-header {
+        height: 5em;
+        padding: 5%;
+        a {
+            font-size: 120%;
+            color: #ffffff;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+
+    #second-header,
+    #single-post-header  {
         background-color: #6699cc;
         border-bottom: 0 solid transparent;
         .nav-link {
@@ -211,12 +281,13 @@ footer {
         border-bottom: 0.3em solid #1a237e;
     }
 
+    // homepage blog post styling...
     .blog-post {
         top: 25%;
         margin: 1%;
         padding: 2%;
         button {
-            margin-top: 1%;
+            margin-top: 3%;
             font-size: 70%;
             &:hover {
                 cursor: pointer;
@@ -226,6 +297,12 @@ footer {
         .pagination {
             padding: 5% 8% 18% 8%;
         }
+    }
+
+    section {
+        .comments {
+            margin-bottom: 15% !important;
+    }
     }
 
     footer {
@@ -248,6 +325,7 @@ footer {
         width: 25%;
         float: left;
     }
+
 
     // mobile menu styling
     // Mobile menu body 
@@ -301,7 +379,7 @@ footer {
         text-align: center;
         text-transform: uppercase;
         background-color: #ffffff;
-        border: 0.15em solid lightgrey;
+        border: 0.15em solid lightgray;
         border-radius: 0.2em;
         text-align: center;
         display: block;
@@ -309,6 +387,7 @@ footer {
         z-index: 500; 
         &:hover {
             border: none;
+            background-color: #f5f5f5;
         }
     }
 
@@ -319,8 +398,12 @@ footer {
         right: 0.8%;
     }
 
-    .col-50 {
-        padding: 2% 2%;
+    .category-header {
+        margin:  0.5% 2%;
+        padding-bottom: 3%;
+        img {
+            padding-top: 6%;
+        }
     }
 
     .mobile-menu a:focus, .mobile-menu a:hover {
@@ -332,7 +415,7 @@ footer {
         width: 98.5% !important;
         padding: 2% 0 !important;
         input {
-        font-size: 200% !important;
+            font-size: 200% !important;
         &:focus {
             border: none !important;
         }
@@ -340,19 +423,21 @@ footer {
     }
 }
 
-// post image, mobile menu and footer responsiveness styling
+// post image, mobile menu and footer added responsiveness styling
 @media only screen and (min-width: 501px) and (max-width: 575px) {
-    .post-img {
-        width: 27.5%;
-        margin: 1% 0;
-        padding-left: 1%;
-    }
+    .blog-post {
+        img {
+            width: 27.5%;
+            margin: 1% 0;
+            padding-left: 1%;
+        }
+    }     
     .mobile-menu {
         img {
             width: 23%;
         }
         a {
-        padding: 2% 1%;
+            padding: 2% 1%;
         }
     }
     footer {
@@ -366,17 +451,19 @@ footer {
 }
 
 @media only screen and (min-width: 480px) and (max-width: 500px) {
-    .post-img {
-        width: 30%;
-        margin: 1% 0;
-        padding-left: 1%;
+    .blog-post {
+        img {
+            width: 30%;
+            margin: 1% 0;
+            padding-left: 1%;
+        }
     }
     .mobile-menu {
         img {
             width: 28%;
         }
         a {
-        padding: 3.2% 1%;
+            padding: 3.2% 1%;
         }
     }
     footer {
@@ -390,17 +477,19 @@ footer {
 }
 
 @media only screen and (min-width: 391px) and (max-width: 479px) {
-    .post-img {
-        width: 33%;
-        margin-top: 1%;
-        padding-left: 1%;
+    .blog-post {
+        img {
+            width: 32%;
+            margin-top: 1%;
+            padding-left: 1%;
+        }
     }
     .mobile-menu {
         img {
             width: 28%;
         }
         a {
-        padding: 3.5% 1%;
+            padding: 3.5% 1%;
         }
     }
     footer {
@@ -414,22 +503,30 @@ footer {
 }
 
 @media only screen and (min-width: 0) and (max-width: 390px) {
-    .post-img {
-        width: 40%;
-        margin-top: 1%;
-        padding-left: 1%;
+    .blog-post {
+        img {
+            width: 35%;
+            margin-top: 1%;
+            padding-left: 2%;
+        }
+    }
+    html {
+        font-size: 75%;
+        h2 {
+            font-size: 140%;
+        }
     }
     .mobile-menu {
         img {
             width: 30%;
         }
         a {
-        padding: 5.3% 1%;
+            padding: 5.3% 1%;
         }
     }
     footer {
         img {
-            width: 30%;
+            width: 28%;
             height: auto;
             padding-bottom: 5%;
             margin: 0 25%;

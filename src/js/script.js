@@ -7,7 +7,7 @@ var shortenText = function(options) {
         cont: ' ...',
     }, options);
 
-    $('.post-text').each(function() {
+    $('.shortened-post p').each(function() {
 
         var $post = $(this);
         var abrev = $post.text();

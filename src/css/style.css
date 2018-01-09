@@ -1,4 +1,4 @@
-/* ***************** Font styling *********************/
+/****************** Font styling *********************/
 @font-face {
   font-family: 'Nunito';
   src: url("../fonts/Nunito-Regular.ttf") format("truetype");
@@ -42,49 +42,83 @@ body {
   border-bottom: 0.1rem solid #6699cc; }
 
 .blog-post {
-  margin: 4.8%;
-  padding: 2%;
-  background-color: #ffffff; }
+  margin: 4.8% 1%;
+  padding: 2.5%;
+  background-color: #ffffff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem; }
+  .blog-post a {
+    color: #000000; }
   .blog-post button {
+    color: #000000 !important;
     margin-top: 1%;
     font-size: 80%; }
     .blog-post button:hover {
+      color: #000000 !important;
       cursor: pointer;
       background-color: #f5f5f5; }
+    .blog-post button:focus, .blog-post button:active {
+      background-color: none !important; }
+  .blog-post img {
+    padding-left: 1%;
+    margin-top: 1%;
+    width: 30%;
+    height: auto;
+    float: right; }
 
-.sidebar {
-  margin: 16% 1%;
-  padding: 2% 0 2% 6%;
-  background-color: #ffffff;
-  clear: left; }
+.single-post {
+  margin-top: 4.8%; }
+  .single-post .post-img {
+    margin-bottom: 2%;
+    width: 100%;
+    height: auto; }
+  .single-post a {
+    text-decoration: none !important; }
 
-.btn-outline-primary {
-  border-color: #000 !important; }
-  .btn-outline-primary a {
-    color: #000 !important; }
+.comments {
+  margin-bottom: 15%; }
 
-.input-group {
-  padding: 3% 6% 3% 0 !important; }
-
-.list-group {
-  padding: 3% 6% 3% 0 !important; }
-
-.list-group-item {
-  padding: 0.2rem 0.8rem !important;
-  border: 1px solid transparent !important; }
+aside .card {
+  margin: 15% 1% 0 1%; }
+  aside .card:last-child {
+    margin-bottom: 7% !important; }
 
 .page-item {
   width: 100%;
   padding-right: 2%; }
 
-.post-img {
-  padding-left: 1%;
-  margin-top: 2%;
-  width: 30%;
-  height: auto; }
-
 .social-icons img {
-  padding: 4% 5%; }
+  margin: 1%; }
+
+@media only screen and (max-width: 767px) {
+  .social-icons img {
+    width: 11%;
+    padding: 1%; }
+  .card {
+    margin: 4% 1% 0 1% !important; } }
+
+textarea:focus,
+input:focus {
+  background-color: none !important;
+  border-color: #000000 !important;
+  box-shadow: none !important; }
+
+.btn-outline-primary {
+  border-color: #000000 !important; }
+  .btn-outline-primary:focus {
+    color: #000000;
+    background-color: none !important;
+    border-color: #000000 !important;
+    box-shadow: none !important; }
+
+.list-group-item {
+  padding: 0.2rem 0 !important;
+  border: 1px solid transparent !important; }
+
+@media only screen and (min-width: 1176px) {
+  .container-fluid {
+    max-width: 1150px !important; } }
 
 @media only screen and (min-width: 500px) and (max-width: 991px) {
   html,
@@ -95,11 +129,8 @@ body {
   .blog-post {
     margin-top: 5%; } }
 
-@media only screen and (min-width: 1176px) {
-  .container-fluid {
-    max-width: 1150px !important; } }
-
 @media only screen and (min-width: 576px) {
+  #single-post-header,
   .mobile-show {
     display: none; }
   .current {
@@ -111,8 +142,7 @@ body {
   footer {
     color: #ffffff;
     padding: 2%;
-    background-color: #6699cc;
-    min-height: 4em; }
+    background-color: #6699cc; }
     footer a {
       color: #ffffff; } }
 
@@ -124,11 +154,15 @@ body {
   aside,
   .footer,
   .mobile-hide,
-  .post-text {
+  .blog-post p {
     display: none !important; }
   .container-fluid {
     padding: 0 !important;
     margin: 0 !important; }
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 25% !important;
+    padding-left: 2%; }
   html {
     font-size: 81%; }
     html h2 {
@@ -138,10 +172,20 @@ body {
   #first-header,
   #second-header {
     z-index: 999; }
-  #second-header {
+  #single-post-header {
+    height: 5em;
+    padding: 5%; }
+    #single-post-header a {
+      font-size: 120%;
+      color: #ffffff; }
+      #single-post-header a:hover {
+        text-decoration: none; }
+  #second-header,
+  #single-post-header {
     background-color: #6699cc;
     border-bottom: 0 solid transparent; }
-    #second-header .nav-link {
+    #second-header .nav-link,
+    #single-post-header .nav-link {
       color: #ffffff; }
   .current {
     color: #ffffff;
@@ -151,13 +195,15 @@ body {
     margin: 1%;
     padding: 2%; }
     .blog-post button {
-      margin-top: 1%;
+      margin-top: 3%;
       font-size: 70%; }
       .blog-post button:hover {
         cursor: pointer;
         background-color: #f5f5f5; }
     .blog-post .pagination {
       padding: 5% 8% 18% 8%; }
+  section .comments {
+    margin-bottom: 15% !important; }
   footer .fixed-bottom a {
     font-size: 85%;
     color: #000000;
@@ -211,21 +257,25 @@ body {
     text-align: center;
     text-transform: uppercase;
     background-color: #ffffff;
-    border: 0.15em solid lightgrey;
+    border: 0.15em solid lightgray;
     border-radius: 0.2em;
     text-align: center;
     display: block;
     margin: 0.05rem;
     z-index: 500; }
     .mobile-menu a:hover {
-      border: none; }
+      border: none;
+      background-color: #f5f5f5; }
   .close-menu {
     cursor: pointer;
     margin-right: 4%;
     position: absolute;
     right: 0.8%; }
-  .col-50 {
-    padding: 2% 2%; }
+  .category-header {
+    margin: 0.5% 2%;
+    padding-bottom: 3%; }
+    .category-header img {
+      padding-top: 6%; }
   .mobile-menu a:focus, .mobile-menu a:hover {
     text-decoration: none;
     border-bottom: none; }
@@ -238,7 +288,7 @@ body {
         border: none !important; } }
 
 @media only screen and (min-width: 501px) and (max-width: 575px) {
-  .post-img {
+  .blog-post img {
     width: 27.5%;
     margin: 1% 0;
     padding-left: 1%; }
@@ -253,7 +303,7 @@ body {
     margin: 0 25%; } }
 
 @media only screen and (min-width: 480px) and (max-width: 500px) {
-  .post-img {
+  .blog-post img {
     width: 30%;
     margin: 1% 0;
     padding-left: 1%; }
@@ -268,8 +318,8 @@ body {
     margin: 0 25%; } }
 
 @media only screen and (min-width: 391px) and (max-width: 479px) {
-  .post-img {
-    width: 33%;
+  .blog-post img {
+    width: 32%;
     margin-top: 1%;
     padding-left: 1%; }
   .mobile-menu img {
@@ -283,16 +333,20 @@ body {
     margin: 0 25%; } }
 
 @media only screen and (min-width: 0) and (max-width: 390px) {
-  .post-img {
-    width: 40%;
+  .blog-post img {
+    width: 35%;
     margin-top: 1%;
-    padding-left: 1%; }
+    padding-left: 2%; }
+  html {
+    font-size: 75%; }
+    html h2 {
+      font-size: 140%; }
   .mobile-menu img {
     width: 30%; }
   .mobile-menu a {
     padding: 5.3% 1%; }
   footer img {
-    width: 30%;
+    width: 28%;
     height: auto;
     padding-bottom: 5%;
     margin: 0 25%; } }
