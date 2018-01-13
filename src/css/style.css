@@ -139,6 +139,9 @@ input:focus {
     display: none !important; }
   .pagination {
     padding: 3% 30% 0 30%; }
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 20% !important; }
   footer {
     color: #ffffff;
     padding: 2%;
@@ -152,7 +155,6 @@ input:focus {
   *, *:before, *:after {
     box-sizing: border-box; }
   aside,
-  .footer,
   .mobile-hide,
   .blog-post p {
     display: none !important; }
@@ -162,7 +164,7 @@ input:focus {
   .carousel-control-prev,
   .carousel-control-next {
     width: 25% !important;
-    padding-left: 2%; }
+    padding-left: 3%; }
   html {
     font-size: 81%; }
     html h2 {
@@ -182,6 +184,8 @@ input:focus {
         text-decoration: none; }
   #second-header,
   #single-post-header {
+    font-size: 95%;
+    font-weight: bold;
     background-color: #6699cc;
     border-bottom: 0 solid transparent; }
     #second-header .nav-link,
@@ -214,7 +218,6 @@ input:focus {
     background-color: #ffffff;
     border-top-left-radius: 0.5em;
     border-top-right-radius: 0.5em;
-    position: fixed;
     z-index: 400; }
   .col-25 {
     width: 25%;
@@ -350,3 +353,7 @@ input:focus {
     height: auto;
     padding-bottom: 5%;
     margin: 0 25%; } }
+
+@media only screen and (min-width: 320px) {
+  body {
+    overflow-x: hidden; } }

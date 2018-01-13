@@ -133,7 +133,7 @@ aside .card {
 }
 }
 
-// overiding bootstrap styling
+//overriding bootstrap
 textarea:focus,
 input:focus {
     background-color: none !important;
@@ -197,6 +197,11 @@ input:focus {
     padding: 3% 30% 0 30%;
 }
 
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 20% !important;  
+    }
+
 footer {
     color: #ffffff;
     padding: 2%;
@@ -219,13 +224,12 @@ footer {
     }
 
     aside,
-    .footer,
     .mobile-hide,
     .blog-post p {
         display: none !important;
     }
 
-    // overiding bootstrap styling
+    //overriding bootstrap 
     .container-fluid {
         padding: 0 !important;
         margin: 0 !important;
@@ -234,7 +238,7 @@ footer {
     .carousel-control-prev,
     .carousel-control-next {
         width: 25% !important;  
-        padding-left: 2%;
+        padding-left: 3%;
     }
 
     html {
@@ -268,6 +272,8 @@ footer {
 
     #second-header,
     #single-post-header  {
+        font-size: 95%;
+        font-weight: bold;
         background-color: #6699cc;
         border-bottom: 0 solid transparent;
         .nav-link {
@@ -317,7 +323,6 @@ footer {
             background-color: #ffffff;
             border-top-left-radius: 0.5em;
             border-top-right-radius: 0.5em;
-            position: fixed;
             z-index: 400; 
         }
     }
@@ -532,4 +537,12 @@ footer {
             margin: 0 25%;
         }
     }
+}
+
+
+@media only screen and (min-width: 320px) {
+
+body {
+    overflow-x: hidden;
+}
 }
