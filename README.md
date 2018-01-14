@@ -10,6 +10,6 @@ SEO-friendly, responsive blog template built with Bootstrap 4 and SCSS.
 * Gulp
 
 ### Screenshots
+*  [Mobile home page](src/images/mobile_home.png "mobile Home page")
+*  [Post page](src/images/post_page.png "mobile Home page")
 *  [Mobile menu](src/images/mobile_menu.png "mobile menu")
-*  [Mobile Home page](src/images/mobile_home1.png "mobile Home page")
-*  [Mobile Home page](src/images/mobile_home2.png "mobile Home page")
